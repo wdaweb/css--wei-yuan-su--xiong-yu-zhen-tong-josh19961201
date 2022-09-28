@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 歸零 */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      .bear {
+        /* 基本屬性和位置 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* 顏色邊框樣式 */
+        height: 500px;
+        width: 500px;
+        background: black;
+        border-radius: 50%;
+      }
+
+      .bear::before {
+        content: "";
+
+        position: absolute;
+
+        height: 120px;
+        width: 120px;
+        background: red;
+        border-radius: 50%;
+
+        top: 42%;
+        left: -5%;
+      }
+      .bear::after {
+        content: "";
+
+        position: absolute;
+
+        height: 120px;
+        width: 120px;
+        background: red;
+        border-radius: 50%;
+
+        top: 42%;
+        left: 80%;
+      }
+
+      .ear {
+        /* 不顯示，做定位點使用*/
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+      }
+
+      .ear::before {
+        content: "";
+        position: absolute;
+        top: -430%;
+        left: -355%;
+
+        height: 80px;
+        width: 80px;
+        background: white;
+        border: 15px solid black;
+        border-radius: 50%;
+      }
+      .ear::after {
+        content: "";
+        position: absolute;
+        top: -430%;
+        left: 285%;
+
+        height: 80px;
+        width: 80px;
+        background: white;
+        border: 15px solid black;
+        border-radius: 50%;
+      }
+      .eye_left {
+        position: absolute;
+
+        height: 100px;
+        width: 100px;
+        border: 15px solid white;
+        border-radius: 50%;
+
+        top: 22%;
+        left: 19%;
+      }
+      .eye_right {
+        position: absolute;
+
+        height: 100px;
+        width: 100px;
+        border: 15px solid white;
+        border-radius: 50%;
+
+        top: 22%;
+        left: 61%;
+      }
+      .nose_mouth {
+        position: absolute;
+
+        height: 130px;
+        width: 230px;
+        border-radius: 50%;
+        background: white;
+
+        top: 42%;
+        left: 27%;
+      }
+      .nose_mouth::before {
+        content: "";
+        position: absolute;
+
+        height: 35px;
+        width: 55px;
+        border-radius: 50%;
+        background: black;
+
+        top: 8%;
+        left: 40%;
+      }
+      .nose_mouth::after {
+        content: "";
+        position: absolute;
+
+        height: 45px;
+        width: 150px;
+        border-radius: 50%;
+        background: black;
+
+        top: 50%;
+        left: 19%;
+      }
+      .v-mark {
+        position: absolute;
+
+        width: 250px;
+        height: 0;
+        border-top: 70px solid white;
+        border-right: 75px solid transparent;
+        border-left: 75px solid transparent;
+
+        top: 77%;
+        left: 26%;
+      }
+      .v-mark::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 0;
+        border-top: 70px solid black;
+        border-right: 75px solid transparent;
+        border-left: 75px solid transparent;
+        top: -98px;
+        left: -25%;
+      }
+    </style>
+    <title>熊</title>
+  </head>
+  <body>
+    <div class="bear">
+      <div class="ear"></div>
+      <div class="eye_left"></div>
+      <div class="eye_right"></div>
+      <div class="nose_mouth"></div>
+      <div class="v-mark"></div>
+    </div>
+  </body>
+</html>

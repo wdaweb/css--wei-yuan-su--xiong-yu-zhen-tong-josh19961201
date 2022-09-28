@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 這是最後面那一根比較細的 */
+      .syringe {
+        /* 基本屬性和大小 */
+        position: absolute;
+        width: 750px;
+        height: 80px;
+
+        /* 位置 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* 邊框樣式及背景漸層 */
+        border: 0.5px solid #aaa;
+        border-radius: 0 0.5rem 0.5rem 0;
+        background-image: linear-gradient(white 10%, lightgray, white);
+      }
+
+      /* 這是最大那一根 */
+      .others {
+        /* 基本屬性和大小 */
+        position: absolute;
+        width: 600px;
+        height: 140px;
+
+        /* 位置 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* 邊框樣式、背景漸層及刻度 */
+        border: 0.5px solid #aaa;
+        background-image: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.3) 45%,
+            rgba(0, 0, 0, 1) 45%,
+            rgba(0, 0, 0, 1) 55%,
+            rgba(255, 255, 0, 0.3) 55%
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 3.9%,
+            rgba(150, 150, 150, 1) 3.9%,
+            rgba(150, 150, 150, 1) 4%
+          ),
+          linear-gradient(white 15%, #bbb, white);
+        background-size: 100%, 100% 15%, 100%;
+        background-repeat: no-repeat;
+
+        /* 文字屬性設定 */
+        line-height: 250px;
+        font-size: 1.2rem;
+        color: #aaa;
+        font-weight: 600;
+      }
+
+      /* 這是最左側的那根 */
+      .others::before {
+        /* 基本屬性和大小 */
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 130px;
+
+        /* 位置 */
+        top: 50%;
+        left: -14%;
+        transform: translate(-50%, -50%);
+
+        /* 外框及背景屬性 */
+        border: 0.5px solid #aaa;
+        border-radius: 0.5rem;
+        background: linear-gradient(white 5%, lightgray, white);
+      }
+
+      /* 這是右邊的針 */
+      .others::after {
+        /* 基本屬性、大小、邊框 */
+        content: "";
+        position: absolute;
+        width: 100px;
+        border: 0.5px solid #777;
+        border-radius: 0.5rem;
+
+        /* 位置 */
+        top: 50%;
+        left: 121%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <title>針筒2.0</title>
+  </head>
+  <body>
+    <div class="syringe">
+      <div class="others">Made in Taiwan</div>
+    </div>
+  </body>
+</html>
